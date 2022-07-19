@@ -30,7 +30,8 @@ public class ChessMatch {
     }
 
     private void initialSetup(){
-        board.placePiece(new Rook(board, Color.WHITE),new Position(2, 1)); //adding the specific piece to the board, with the initial setup game.(test)
+        board.placePiece(new Rook(board, Color.WHITE),new Position(2, 1)); //adding a piece to the board, choosing the color and the board position.
+
     }
 
 }
