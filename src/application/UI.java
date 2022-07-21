@@ -32,7 +32,7 @@ public class UI {
             }
             System.out.println();
         }
-        System.out.println(" a b c d e f g h");
+        System.out.println("  a b c d e f g h");
 
     }
 
@@ -41,7 +41,7 @@ public class UI {
             System.out.print("-");
         }
         else {
-            if(piece.getColor() == Color.WHITE){
+            if (piece.getColor() == Color.WHITE){
                 System.out.print(ANSI_WHITE + piece + ANSI_RESET);
             }
             else {
@@ -49,5 +49,6 @@ public class UI {
             }
         }
         System.out.print(" ");
+        }
+
     }
-}
