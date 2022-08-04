@@ -16,7 +16,6 @@ public class Pawn extends ChessPiece {
     public boolean[][] possibleMoves(){
         boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
         Position p = new Position(0, 0);
-        Position p2 = new Position(position.getRow() - 1,position.getColumn()); //position created to validate that after first pawn turn, it can only walk 1 tile.
         //white pawn
         if (getColor() == Color.WHITE){
             //initial pawn move forward (1 - 2 moves)
@@ -25,6 +24,7 @@ public class Pawn extends ChessPiece {
                 mat[p.getRow()][p.getColumn()] = true;
             }
             p.setValues(position.getRow() - 2, position.getColumn());
+            Position p2 = new Position(position.getRow() - 1,position.getColumn());
             if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p) && getBoard().positionExists(p2) && !getBoard().thereIsAPiece(p2) && getMoveCount() == 0){
                 mat[p.getRow()][p.getColumn()] = true;
             }
@@ -42,6 +42,7 @@ public class Pawn extends ChessPiece {
                 mat[p.getRow()][p.getColumn()] = true;
             }
             p.setValues(position.getRow() + 2, position.getColumn());
+            Position p2 = new Position(position.getRow() + 1,position.getColumn());
             if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p) && getBoard().positionExists(p2) && !getBoard().thereIsAPiece(p2) && getMoveCount() == 0){
                 mat[p.getRow()][p.getColumn()] = true;
             }
