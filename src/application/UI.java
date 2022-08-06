@@ -4,7 +4,6 @@ import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.ChessPosition;
 import chess.Color;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.InputMismatchException;
