@@ -38,6 +38,9 @@ public class Pawn extends ChessPiece {
                 mat[p.getRow()][p.getColumn()] = true;
             }
             p.setValues(position.getRow() - 1, position.getColumn() + 1);
+            if (getBoard().positionExists(p) && isThereOpponentPiece(p)){
+                mat[p.getRow()][p.getColumn()] = true;
+            }
             //special move en passant white pawn
             if (position.getRow() == 3){
                 Position left = new Position(position.getRow(), position.getColumn() - 1);
