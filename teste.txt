@@ -1,0 +1,1 @@
+esse componente de texto serve para testar o as branches.
